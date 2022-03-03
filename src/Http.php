@@ -28,7 +28,7 @@ class Http
         return $response;
     }
 
-    public static function post(string $url, array $data = [], $timeout = 5, $ssl = false)
+    public static function post(string $url, array $data = [], $timeout = 5, $ssl_verify = false)
     {
         $content = http_build_query($data);
         $options = [
@@ -39,7 +39,7 @@ class Http
                 'content' => $content,
             ],
         ];
-        if ($ssl === false) {
+        if ($ssl_verify === false) {
             $options['ssl'] = [
                 'verify_peer' => false,
                 'verify_peer_name' => false,
