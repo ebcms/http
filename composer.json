@@ -1,0 +1,10 @@
+{
+    "name": "ebcms/http",
+    "description": "http的post和get方法封装",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ebcms\\Http\\": "src/"
+        }
+    }
+}
